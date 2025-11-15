@@ -1,3 +1,526 @@
-helloworld
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-this has changed
+  <!-- Primary Meta Tags -->
+  <title>StingiX — Code meets Vision | Software, Web & AI Solutions</title>
+  <meta name="title" content="StingiX — Code meets Vision | Software, Web & AI Solutions">
+  <meta name="description" content="StingiX delivers high-performance software solutions — Web, Mobile, AI, and Cloud development. Transform your ideas into scalable, secure, and elegant digital products.">
+
+  <!-- Keywords for SEO -->
+  <meta name="keywords" content="StingiX, software solutions, web development company, mobile app development, AI development, cloud solutions, UX UI design, startup software agency, custom software, enterprise app development, IT company India, software projects, tech consultancy">
+
+  <!-- Author & Language -->
+  <meta name="author" content="StingiX Team">
+  <meta http-equiv="Content-Language" content="en">
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.stingix.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.stingix.com/">
+  <meta property="og:title" content="StingiX — Code meets Vision | Modern Software Company">
+  <meta property="og:description" content="We build impactful software — Web, Mobile, AI & Cloud solutions tailored to your business vision.">
+  <meta property="og:image" content="https://www.stingix.com/public/Stingix_logo.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.stingix.com/">
+  <meta name="twitter:title" content="StingiX — Code meets Vision">
+  <meta name="twitter:description" content="Modern software agency creating powerful digital experiences — Web, AI, Cloud & Mobile.">
+  <meta name="twitter:image" content="https://www.stingix.com/public/Stingix_logo.jpg">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="public/Stingix_logo.jpg" type="image/x-icon">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3721bf203e.js" crossorigin="anonymous"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data (JSON-LD for Google Rich Snippets) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "StingiX",
+    "url": "https://www.stingix.com/",
+    "logo": "https://www.stingix.com/public/Stingix_logo.jpg",
+    "description": "StingiX is a software solutions company providing Web, Mobile, AI, and Cloud development services.",
+    "sameAs": [
+      "https://github.com/Kaustubh-2003",
+      "https://www.linkedin.com/company/stingix/",
+      "https://twitter.com/stingix"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Kaustubh Pandey"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "contact@stingix.com"
+    }
+  }
+  </script>
+</head>
+
+
+<!-- Navbar -->
+<nav class="nav" id="navbar">
+    <div class="container nav-inner">
+        <div class="logo">
+            <img src="https://www.stingix.com/img/logo.png" alt="StingiX Logo">
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 16px;">
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact" class="cta-btn">Get a Quote</a>
+            </div>
+            
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero">
+    <div class="container hero-grid">
+        <div class="hero-content">
+            <div class="badge">
+                <i class="fa-solid fa-rocket"></i>
+                Trusted • Scalable • Fast
+            </div>
+
+            <h1 class="headline">
+                We build smart software that <span class="gradient-text">scales</span>.
+            </h1>
+
+            <p class="sub">
+                Delivering next-gen digital solutions — web, mobile, AI, cloud, and design — for startups and enterprises worldwide.
+            </p>
+
+            <div class="hero-cta">
+                <a href="#contact" class="cta-btn">Let's Build Together</a>
+                <a href="#projects" class="btn-secondary">See Projects</a>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="stat-value">25+</div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">10+</div>
+                    <div class="stat-label">Satisfied Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">5+</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="float-element float-1"></div>
+            <div class="float-element float-2"></div>
+            <div class="mockup-frame">
+                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop" alt="Modern workspace with laptop and code">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Our Expertise</span>
+            <h2 class="section-title">Services We Offer</h2>
+            <p class="section-subtitle">Comprehensive digital solutions tailored to your business needs</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card fade-up">
+                <div class="service-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Modern, responsive frontends and robust Node/Express or static deployments that deliver exceptional user experiences.</p>
+            </div>
+
+            <div class="service-card fade-up">
+                <div class="service-icon">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <h3>Mobile Apps</h3>
+                <p>Cross-platform apps with React Native & Flutter that delight users and drive engagement across iOS and Android.</p>
+            </div>
+
+            <div class="service-card fade-up">
+                <div class="service-icon">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <h3>AI & Automation</h3>
+                <p>Intelligent chatbots, recommendation systems, and automation pipelines powered by cutting-edge AI technology.</p>
+            </div>
+
+            <div class="service-card fade-up">
+                <div class="service-icon">
+                    <i class="fa-solid fa-cloud"></i>
+                </div>
+                <h3>Cloud & DevOps</h3>
+                <p>Scalable infrastructure, CI/CD pipelines, and cloud deployments on AWS and GCP for maximum reliability.</p>
+            </div>
+
+            <div class="service-card fade-up">
+                <div class="service-icon">
+                    <i class="fa-solid fa-paintbrush"></i>
+                </div>
+                <h3>UI / UX Design</h3>
+                <p>Beautiful design systems, interactive prototypes, and polished interfaces that users love to interact with.</p>
+            </div>
+
+            <div class="service-card fade-up">
+                <div class="service-icon">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                </div>
+                <h3>Consulting</h3>
+                <p>Strategic product planning, technical architecture reviews, and comprehensive audits to optimize your systems.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+    <div class="container about-grid">
+        <div class="about-image fade-up">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="Team collaboration">
+        </div>
+
+        <div class="about-content fade-up">
+            <h2>About StingiX</h2>
+            <p>StingiX builds production-grade software for businesses that demand performance, security, and elegant user experiences. We focus on rapid delivery, clean code, and measurable outcomes that drive real business value.</p>
+
+            <div class="mission-box">
+                <h4>Our Mission</h4>
+                <p style="color:var(--muted);margin:0">To empower teams with software that turns ideas into reliable, scalable products that users love.</p>
+            </div>
+
+            <div class="about-stats">
+                <div class="about-stat">
+                    <h3>25+</h3>
+                    <p>Projects</p>
+                </div>
+                <div class="about-stat">
+                    <h3>10+</h3>
+                    <p>Clients</p>
+                </div>
+                <div class="about-stat">
+                    <h3>5+</h3>
+                    <p>Countries</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Portfolio</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Discover some of our recent work and success stories</p>
+        </div>
+
+        <div class="projects-grid">
+            <article class="project-card fade-up">
+                <img class="project-thumb" src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800&auto=format&fit=crop" alt="Educara LMS Platform">
+                <div class="project-body">
+                    <h3>Educara — LMS Platform</h3>
+                    <p>A modern e-learning platform with comprehensive course management, student tracking, and automated email workflows.</p>
+                    <a href="#" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="project-card fade-up">
+                <img class="project-thumb" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="FinTrack Dashboard">
+                <div class="project-body">
+                    <h3>FinTrack — Analytics Dashboard</h3>
+                    <p>Real-time financial analytics dashboard with interactive charts, used by small finance teams to track performance.</p>
+                    <a href="#" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="project-card fade-up">
+                <img class="project-thumb" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop" alt="Vigilink Safety App">
+                <div class="project-body">
+                    <h3>Vigilink — Safety App</h3>
+                    <p>Real-time location tracking and emergency assistance mobile app that keeps users safe and connected on the go.</p>
+                    <a href="#" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Testimonials</span>
+            <h2 class="section-title">What Clients Say</h2>
+            <p class="section-subtitle">Don't just take our word for it — hear from our satisfied clients</p>
+        </div>
+
+        <div class="testimonials-carousel">
+            <div class="testimonial fade-up">
+                <p class="testimonial-text">"StingiX shipped our MVP in just 6 weeks and exceeded all expectations. Their team is incredibly reliable, communicative, and truly understands product development."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">PR</div>
+                    <div class="author-info">
+                        <strong>Priya R.</strong>
+                        <span>Founder, EduStart</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial fade-up">
+                <p class="testimonial-text">"Outstanding development discipline and beautifully polished UI. They understand product needs quickly and deliver solutions that work flawlessly."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AS</div>
+                    <div class="author-info">
+                        <strong>Aman S.</strong>
+                        <span>CTO, FinTrack</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial fade-up">
+                <p class="testimonial-text">"They delivered a secure cloud infrastructure with seamless CI/CD integration. Post-launch support has been excellent — highly recommended!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SK</div>
+                    <div class="author-info">
+                        <strong>Sara K.</strong>
+                        <span>Product Lead</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+    <div class="container contact-grid">
+        <div class="contact-form fade-up">
+            <h2 style="margin-bottom:12px">Let's Build Something Great</h2>
+            <p style="color:var(--muted);margin-bottom:32px">Share a few details and we'll get back with a tailored plan and estimate.</p>
+
+            <form onsubmit="return handleForm(event)">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" placeholder="you@company.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Project Details</label>
+                    <textarea id="message" placeholder="Tell us about your project" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <div class="contact-info fade-up">
+            <div class="info-card">
+                <h3>Get In Touch</h3>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <div style="color:var(--muted);font-size:13px;margin-bottom:4px">Email</div>
+                        <a href="mailto:team@stingix.com">dev@stingix.com</a>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <div style="color:var(--muted);font-size:13px;margin-bottom:4px">Phone</div>
+                        <a href="tel:+918355072577">+91 83550 72577</a>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.fiverr.com" target="_blank" aria-label="Fiverr" title="Find us on Fiverr">
+                        <i class="fa-solid fa-f"></i>
+                    </a>
+                    <a href="https://www.upwork.com" target="_blank" aria-label="Upwork" title="Hire us on Upwork">
+                        <i class="fa-solid fa-u"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn" title="Connect on LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>Our Location</h3>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <strong>Lucknow, India</strong>
+                        <p style="color:var(--muted);font-size:14px;margin:4px 0 0">Open for remote projects worldwide</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container footer-content">
+        <div>
+            <strong>© 2025 StingiX</strong>
+            <p style="color:var(--muted);font-size:14px;margin-top:4px">Code meets Vision</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating CTA -->
+<a href="#contact" class="floating-cta">
+    <i class="fa-solid fa-comment-dots" style="margin-right:8px"></i>
+    Get a Quote
+</a>
+
+<script>
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const body = document.body;
+    
+    // Check for saved theme preference or default to 'dark'
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    body.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+    
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        body.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+    
+    function updateThemeIcon(theme) {
+        const icon = themeToggle.querySelector('i');
+        if (theme === 'dark') {
+            icon.className = 'fa-solid fa-sun';
+        } else {
+            icon.className = 'fa-solid fa-moon';
+        }
+    }
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href.length > 1) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    });
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Intersection Observer for fade-up animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Form handler
+    function handleForm(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+            alert('Please fill all fields');
+            return false;
+        }
+
+        const mailto = `mailto:hello@stingix.com?subject=${encodeURIComponent('New inquiry from ' + name)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
+        window.location.href = mailto;
+
+        return false;
+    }
+
+    // Horizontal scroll for testimonials carousel
+    const carousel = document.querySelector('.testimonials-carousel');
+    if (carousel) {
+        carousel.addEventListener('wheel', (e) => {
+            if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) {
+                e.preventDefault();
+                carousel.scrollBy({ left: e.deltaY, behavior: 'smooth' });
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

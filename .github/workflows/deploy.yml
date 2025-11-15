@@ -21,5 +21,8 @@ jobs:
     - name: Deploy to VPS
       run: |
         rsync -avz --delete \
-        -e "ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_ed25519" \
-        ./ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:${{ secrets.SERVER_PATH }}
+        --exclude='.git/' \
+        --exclude='.github/' \
+        --exclude='.gitignore' \
+        ./ $SERVER_USER@$SERVER_IP:$SERVER_PATH
+

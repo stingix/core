@@ -338,24 +338,24 @@
             <form onsubmit="return handleForm(event)">
                 <div class="form-group">
                     <label>Full Name</label>
-                    <input type="text" id="name" placeholder="Your name" required>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
                 </div>
 
                 <div class="form-group">
                     <label>Email Address</label>
-                    <input type="email" id="email" placeholder="you@company.com" required>
+                    <input type="email" id="email" name="email" placeholder="you@company.com" required>
                 </div>
 
                 <div class="form-group">
                     <label>Project Details</label>
-                    <textarea id="message" placeholder="Tell us about your project" required></textarea>
+                    <textarea id="message" name="message" placeholder="Tell us about your project" required></textarea>
                 </div>
 
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
         </div>
 
-        <div class="contact-info fade-up">
+        <form id="contactForm" class="contact-info fade-up">
             <div class="info-card">
                 <h3>Get In Touch</h3>
 
@@ -404,7 +404,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 </section>
 
@@ -521,6 +521,30 @@
         });
     }
 </script>
+
+<script>
+    const form = document.getElementById('contactForm');
+    const responseDiv = document.getElementById('response');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        const res = await fetch('sendmail.php', {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await res.json();
+        responseDiv.innerText = result.message;
+
+        if (result.status === 'success') {
+            form.reset();
+        }
+    });
+</script>
+
 
 </body>
 </html>

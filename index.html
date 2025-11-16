@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant-Menu by StingiX</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Soft Yellow Gradient Background */
+       
+    </style>
+</head>
+<body>
+
+    <!-- Food Particles Background -->
+    <div id="tsparticles"></div>
+
+    <!-- Your Menu UI -->
+    <div class="menu-container" id="menuContainer">
+        <div class="menu">
+
+            <div class="cover-container" id="cover">
+                <div class="cover left-panel">
+                    <h1>Loading</h1>
+                </div>
+
+                <div class="cover center-panel" onclick="openMenu()">
+                    <h1>HCL Food Store</h1>
+                    <div class="subtitle">Fine Indian Cuisine</div>
+                    <div class="cta">Tap to Open</div>
+                </div>
+
+                <div class="cover right-panel">
+                    <h1>Loading</h1>
+                </div>
+            </div>
+
+            <!-- Inside Menu -->
+            <div class="trifold" id="trifold">
+                <div class="trifold-content">
+                    <div class="panel">
+                        <h2>🍴 Appetizers</h2>
+                        <div class="menu-item">
+                            <h3>Bruschetta <span class="price">$12</span></h3>
+                        </div>
+                        <div class="menu-item">
+                            <h3>Calamari Fritti <span class="price">$15</span></h3>
+                        </div>
+                        <h2 style="margin-top:20px;">🥗 Salads</h2>
+                        <div class="menu-item">
+                            <h3>Caesar Salad <span class="price">$11</span></h3>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <h2>🍝 Pasta</h2>
+                        <div class="menu-item"><h3>Carbonara <span class="price">$18</span></h3></div>
+                        <div class="menu-item"><h3>Arrabbiata <span class="price">$16</span></h3></div>
+
+                        <h2 style="margin-top:20px;">🍖 Mains</h2>
+                        <div class="menu-item"><h3>Osso Buco <span class="price">$32</span></h3></div>
+                    </div>
+
+                    <div class="panel">
+                        <h2>🍰 Desserts</h2>
+                        <div class="menu-item"><h3>Tiramisu <span class="price">$9</span></h3></div>
+
+                        <h2 style="margin-top:20px;">☕ Drinks</h2>
+                        <div class="menu-item"><h3>Espresso <span class="price">$4</span></h3></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="close-btn" id="closeBtn" onclick="closeMenu()">Close ✖</button>
+    </div>
+
+    <!-- tsParticles CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

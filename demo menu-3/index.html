@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Shop Menu</title>
+<style>
+  :root{
+    --bg:#2b1e1c;
+    --primary:#ff7f32;
+    --text:#ffffff;
+    --muted:#d1c7c2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;}
+  body{background:#eee;padding:20px;}
+  .menu-container{
+    background:var(--bg);
+    color:var(--text);
+    max-width:900px;
+    margin:auto;
+    padding:40px 30px;
+    border-radius:8px;
+  }
+  h1,h2{text-align:center;}
+  h1{font-size:42px;margin-bottom:10px;}
+  h2{font-size:24px;margin:20px 0;color:var(--primary);}
+
+  .menu-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    margin-top:20px;
+  }
+
+  .menu-box ul{list-style:none;}
+  .menu-box li{
+    display:flex;
+    justify-content:space-between;
+    padding:6px 0;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    font-size:14px;
+  }
+  .price{color:var(--primary);font-weight:bold;}
+
+  footer{text-align:center;margin-top:30px;font-size:14px;color:var(--muted);}
+
+  /* Responsive */
+  @media(max-width:700px){
+    .menu-grid{grid-template-columns:1fr;}
+    .menu-container{padding:25px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="menu-container">
+    <h1>MENU</h1>
+
+    <div class="menu-grid">
+
+        <div class="menu-box">
+            <h2>COFFEE</h2>
+            <ul>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+            </ul>
+        </div>
+
+        <div class="menu-box">
+            <h2>TEA</h2>
+            <ul>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+            </ul>
+        </div>
+
+        <div class="menu-box">
+            <h2>BEVERAGES</h2>
+            <ul>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+            </ul>
+        </div>
+
+        <div class="menu-box">
+            <h2>PATISSERIES</h2>
+            <ul>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+                <li><span>Lorem Ipsum Dolor</span><span class="price">$0.00</span></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        www.coffeeshop.com
+    </footer>
+</div>
+
+</body>
+</html>

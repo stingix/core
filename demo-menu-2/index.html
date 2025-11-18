@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vintage Cafe Menu</title>
+  <style>
+    :root{
+      --bg:#efe2d5;
+      --panel:#6f4037;
+      --accent:#b08979;
+      --text:#3d2b26;
+      --muted:#7b5b52;
+      --padding:20px;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);}
+
+    .container{
+      max-width:1000px;
+      margin:24px auto;
+      padding:16px;
+    }
+
+    header.menu-header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between;
+      border:6px dashed var(--accent);
+      padding:18px;
+      background:transparent;
+    }
+
+    header .title{font-size:48px;letter-spacing:6px;font-weight:700;color:var(--panel);}
+    header .meta{font-size:14px;color:var(--muted);}
+
+    /* grid layout for desktop */
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:18px;
+    }
+
+    .panel{
+      background:linear-gradient(180deg,var(--panel),var(--panel));
+      color:var(--bg);
+      padding:22px;
+      min-height:220px;
+      position:relative;
+      overflow:hidden;
+      border-radius:4px;
+    }
+
+    .panel.light{
+      background:transparent;
+      color:var(--text);
+      border:6px dashed var(--accent);
+    }
+
+    .section-title{
+      display:inline-block;
+      padding:10px 18px;
+      border:3px dashed rgba(255,255,255,0.15);
+      margin-bottom:12px;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-size:14px;
+      background:rgba(0,0,0,0.05);
+    }
+
+    .panel.light .section-title{
+      border:3px dashed var(--accent);
+      background:transparent;
+      color:var(--text);
+    }
+
+    ul.menu-list{list-style:none;padding:0;margin:0}
+    ul.menu-list li{display:flex;justify-content:space-between;padding:6px 0;font-size:15px}
+    ul.menu-list li small{color:var(--muted);font-size:13px}
+
+    /* full width footer note */
+    .note{margin-top:18px;border-top:1px solid rgba(0,0,0,0.06);padding-top:14px;font-size:13px;color:var(--muted);text-align:center}
+
+    /* mobile behavior: stack panels vertically */
+    @media (max-width:700px){
+      header .title{font-size:36px}
+      .grid{grid-template-columns:1fr;}
+      .panel{min-height:unset;padding:16px}
+      .container{padding:12px;margin:8px}
+      header.menu-header{flex-direction:column;align-items:flex-start}
+    }
+
+    /* small JS friendly collapsible headers */
+    .collapsible{cursor:pointer;display:flex;align-items:center;justify-content:space-between}
+    .chev{font-size:18px;opacity:0.8}
+    .hidden{display:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="menu-header">
+      <div>
+        <div style="font-size:14px;color:var(--muted)">123 Southern Park<br>Josep Lane Boston MA 60008</div>
+      </div>
+      <div class="title">Menu</div>
+      <div class="meta">Open from 8am - 8pm<br>Order Online<br>www.menu.com</div>
+    </header>
+
+    <main class="grid">
+      <section class="panel" id="coffee">
+        <div class="collapsible" onclick="toggleSection('coffee-list','coffee')">
+          <span class="section-title">Coffee Drinks</span>
+          <span class="chev">▾</span>
+        </div>
+        <ul class="menu-list" id="coffee-list">
+          <li><span>Espresso</span><span>5.90</span></li>
+          <li><span>Iced Coffee</span><span>4.95</span></li>
+          <li><span>Macchiato</span><span>5.95</span></li>
+          <li><span>Coffee with Cream</span><span>5.95</span></li>
+          <li><span>Chocolate Coffee</span><span>4.25</span></li>
+          <li><span>Long Black</span><span>2.99</span></li>
+          <li><span>House Blend</span><span>2.99</span></li>
+          <li><span>Decaf Coffee</span><span>2.99</span></li>
+          <li><span>Latte</span><span>4.95</span></li>
+        </ul>
+      </section>
+
+      <aside class="panel light" id="salads">
+        <div class="collapsible" onclick="toggleSection('salads-list','salads')">
+          <span class="section-title">Salads</span>
+          <span class="chev">▾</span>
+        </div>
+        <ul class="menu-list" id="salads-list">
+          <li><span>Arugula</span><span>5.90</span></li>
+          <li><span>Spinach</span><span>4.95</span></li>
+          <li><span>Cauliflower</span><span>5.95</span></li>
+          <li><span>Avocado</span><span>5.95</span></li>
+          <li><span>Cucumber</span><span>4.25</span></li>
+          <li><span>Lettuce</span><span>2.99</span></li>
+          <li><span>Beets</span><span>2.99</span></li>
+          <li><span>Carrots</span><span>2.99</span></li>
+          <li><span>Mixed</span><span>4.95</span></li>
+        </ul>
+      </aside>
+
+      <section class="panel light" id="soups">
+        <div class="collapsible" onclick="toggleSection('soups-list','soups')">
+          <span class="section-title">Soups</span>
+          <span class="chev">▾</span>
+        </div>
+        <ul class="menu-list" id="soups-list">
+          <li><span>Cheddar & Broccoli</span><span>4.95</span></li>
+          <li><span>Pumpkin</span><span>4.95</span></li>
+          <li><span>Carrots & Celery</span><span>4.95</span></li>
+          <li><span>Cream of Potato</span><span>5.25</span></li>
+          <li><span>Butter Squash</span><span>5.25</span></li>
+          <li><span>Split Pea</span><span>5.25</span></li>
+          <li><span>Claw Chowder</span><span>6.99</span></li>
+          <li><span>House Special</span><span>6.99</span></li>
+          <li><span>Lobster Bisque</span><span>7.99</span></li>
+        </ul>
+      </section>
+
+      <aside class="panel" id="desserts">
+        <div class="collapsible" onclick="toggleSection('desserts-list','desserts')">
+          <span class="section-title">Desserts</span>
+          <span class="chev">▾</span>
+        </div>
+        <ul class="menu-list" id="desserts-list">
+          <li><span>Chocolate Cheesecake</span><span>5.90</span></li>
+          <li><span>Sticky Toffee Pudding</span><span>4.95</span></li>
+          <li><span>Fried Ice Cream</span><span>5.95</span></li>
+          <li><span>Banana Boat Pie</span><span>5.95</span></li>
+          <li><span>Strawberry Pudding</span><span>4.25</span></li>
+          <li><span>Rum Cake</span><span>2.99</span></li>
+          <li><span>Nutella Cheesecake</span><span>2.99</span></li>
+          <li><span>Tiramisu</span><span>2.99</span></li>
+          <li><span>Brownie Gelato</span><span>4.95</span></li>
+        </ul>
+      </aside>
+    </main>
+
+    <div class="note">*For ingredients & dietary information, please visit www.chriscafe.com</div>
+  </div>
+
+  <script>
+    // Simple collapse functionality: on small screens it acts like accordion
+    function toggleSection(listId, panelId){
+      const list = document.getElementById(listId);
+      const panel = document.getElementById(panelId);
+      // if mobile, toggle visibility; on desktop do nothing
+      if(window.matchMedia('(max-width:700px)').matches){
+        list.classList.toggle('hidden');
+        const chev = panel.querySelector('.chev');
+        if(list.classList.contains('hidden')) chev.textContent = '▸'; else chev.textContent = '▾';
+      }
+    }
+
+    // initialize: hide lists on mobile for compactness
+    function init(){
+      if(window.matchMedia('(max-width:700px)').matches){
+        document.querySelectorAll('.menu-list').forEach((ul)=>ul.classList.add('hidden'));
+        document.querySelectorAll('.chev').forEach((c)=>c.textContent='▸');
+      } else {
+        document.querySelectorAll('.menu-list').forEach((ul)=>ul.classList.remove('hidden'));
+        document.querySelectorAll('.chev').forEach((c)=>c.textContent='▾');
+      }
+    }
+
+    window.addEventListener('resize', init);
+    window.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
